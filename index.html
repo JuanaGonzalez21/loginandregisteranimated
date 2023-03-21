@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>login-neon</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Formulario de inicio de sesion -->
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Iniciar Sesion</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label class="user-space" for="">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label class="pass-space" for="">Contraseña</label>
+                </div>
+                <div class="remember">
+                    <div class="styled-input-single">
+                        <input type="checkbox" name="fieldset-1" id="radio-singin" />
+                        <label for="radio-singin">Recordar mi contraseña</label>
+                    </div>
+                </div>
+                <button type="submit">Ingresar</button>
+                <div class="signUp-link">
+                    <p>No tienes una cuenta?<a class="signUpBtn-link" href="#">Registrarme</a></p>
+                </div>
+            </form>
+        </div>
+        <!-- Formulario de registro -->
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Registro</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label class="user-space" for="">Usuario</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label class="email-space" for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" required>
+                    <label class="pass-space" for="">Contraseña</label>
+                </div>
+                <div class="remember">
+                    <div class="style-input-r">
+                        <input type="checkbox" name="fieldset-1" id="radio-signup" />
+                        <label for="radio-signup">Aceptar Términos y Condiciones</label>
+                    </div>
+                </div>
+                <button type="submit">Registrarme</button>
+                <div class="signUp-link">
+                    <p>Ya tengo una cuenta<a class="signInBtn-link" href="#">Iniciar Sesión</a></p>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    <div class="footer-link">
+        <footer>
+            <p>Idea: Codehal (https://www.youtube.com/@codehal)</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

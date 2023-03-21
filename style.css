@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quattrocento', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+/* Cuadro externo del formulario */
+
+.wrapper {
+    position: relative;
+    width: 380px;
+    height: 500px;
+    background: #000;
+    box-shadow: 0 0 50px #0ef;
+    border-radius: 20px;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* Cambio de color */
+
+body:hover {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    100% {
+        filter: hue-rotate(360deg)
+    }
+}
+
+/* formulario de usuario y contraseña */
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: 1s ease-in-out;
+}
+
+/* Cambio de vista (utilizando js) */
+.wrapper.active .form-wrapper.sign-in {
+    transform: translateY(-450px);
+}
+
+.wrapper .form-wrapper.sign-up {
+    position: absolute;
+    top: 450px;
+    left: 0;
+}
+
+.wrapper.active .form-wrapper.sign-up {
+    transform: translateY(-450px);
+}
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+.input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+
+}
+
+.input-group label {
+    text-align: center !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.user-space {
+    right: 130px;
+}
+
+.pass-space {
+    right: 118px;
+}
+
+.input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Sube los textos y los mantiene  */
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -5px;
+
+}
+
+/* Olvide mi contraseña */
+
+.remember {
+    margin: -5px 0 15px 5px;
+}
+
+.remember label {
+    color: #fff;
+    font-size: 14px;
+
+}
+
+.remember label input {
+    accent-color: #0ef;
+    border-radius: 30px;
+}
+
+/* Checkbox decoration */
+
+.styled-input-single,
+.styled-input-singleR label {
+    cursor: pointer;
+}
+
+.styled-input-single {
+    margin: 20px;
+}
+
+.styled-input-single label:before,
+.styled-input-single label:after {
+    content: "";
+    position: absolute;
+    top: 303px;
+    border-radius: 50%;
+}
+
+.styled-input-singleR label:before,
+.styled-input-singleR label:after {
+    top: 3px;
+}
+
+.styled-input-single label:before {
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    margin: -15px 0 0;
+    background: #f7f7f7;
+    box-shadow: 0 0 1px grey;
+}
+
+.styled-input-single label:after {
+    left: 45px;
+    width: 12px;
+    height: 12px;
+    margin: -11px -1px 0;
+    opacity: 0;
+    background: #37b2b2;
+    transform: translate3d(-40px, 0, 0) scale(0.5);
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.styled-input-single input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    visibility: hidden;
+}
+
+.styled-input-single input[type=checkbox]:checked+label:after {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.styled-input-single {
+    padding-left: 12px;
+}
+
+/* Checkbox de registro */
+
+.style-input-r,
+.style-input-r label {
+    cursor: pointer;
+}
+
+.style-input-r {
+    margin: 20px;
+}
+
+.style-input-r label:before,
+.style-input-r label:after {
+    content: "";
+    position: absolute;
+    top: 338px;
+    border-radius: 50%;
+}
+
+.style-input-rR label:before,
+.style-input-rR label:after {
+    top: 3px;
+}
+
+.style-input-r label:before {
+    left: 40px;
+    width: 20px;
+    height: 20px;
+    margin: -15px 0 0;
+    background: #f7f7f7;
+    box-shadow: 0 0 1px grey;
+}
+
+.style-input-r label:after {
+    left: 45px;
+    width: 12px;
+    height: 12px;
+    margin: -11px -1px 0;
+    opacity: 0;
+    background: #37b2b2;
+    transform: translate3d(-40px, 0, 0) scale(0.5);
+    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.style-input-r input[type=checkbox] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+    visibility: hidden;
+}
+
+.style-input-r input[type=checkbox]:checked+label:after {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.style-input-r {
+    padding-left: 12px;
+}
+
+
+
+/* Botón de ingreso */
+
+button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+
+}
+
+/* Link Regristro */
+
+.signUp-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.signUp-link p {
+    color: #fff;
+}
+
+.signUp-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.signUp-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Formulario de registro */
+
+.email-space {
+    right: 140px;
+}
+
+/* Footer */
+
+.footer-link {
+    position: absolute;
+    top: 99%;
+    left: 78%;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer p {
+    color: #949494;
+    font-size: 10px;
+}
